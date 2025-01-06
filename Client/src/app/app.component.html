@@ -1,0 +1,48 @@
+<div>
+  <nav class="navbar navbar-expand-lg p-2 navbar-dark bg-dark shadow-sm">
+    <a href="#" class="navbar-brand font-bold text-uppercase">
+      <span class="text-primary">Tutorial</span>
+      <span class="text-secondary">Works</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item">
+          <a routerLink="tutorials" routerLinkActive="active" class="nav-link">Tutorials</a>
+        </li> -->
+        <li class="nav-item">
+          <a routerLink="add" routerLinkActive="active" class="nav-link">Add</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a routerLink="docs" class="dropdown-item">Documentation</a>
+            <a routerLink="faq" class="dropdown-item">FAQs</a>
+            <div class="dropdown-divider"></div>
+            <a routerLink="contact" class="dropdown-item">Contact</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="login" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="signup" class="btn btn-outline-primary ml-2">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

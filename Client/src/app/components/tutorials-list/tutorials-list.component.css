@@ -1,0 +1,71 @@
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* General */
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.list-group-item.active {
+  background-color: #007bff !important;
+  color: #fff !important;
+}
+
+/* Buttons */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+/* Input Group */
+.input-group {
+  border-radius: 5px;
+}
+
+.input-group .form-control {
+  border: none;
+  border-right: 1px solid #ccc;
+}
+
+.input-group .btn {
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+}

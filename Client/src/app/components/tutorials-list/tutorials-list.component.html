@@ -1,0 +1,63 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <!-- Search Bar -->
+    <div class="col-md-8 mb-4">
+      <div class="input-group shadow-sm">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search tutorials by title..."
+          [(ngModel)]="title"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Tutorials List -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Tutorials List</h5>
+          <button
+            class="btn  btn-sm btn-danger"
+            (click)="removeAllTutorials()"
+            title="Remove all tutorials"
+          >
+            <i class="fas fa-trash">Remove all</i>
+          </button>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li
+            class="list-group-item list-group-item-action"
+            *ngFor="let tutorial of tutorials; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveTutorial(tutorial, i)"
+          >
+            {{ tutorial.title }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tutorial Details -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-secondary text-white">
+          <h5 class="mb-0">Tutorial Details</h5>
+        </div>
+        <div class="card-body">
+          <app-tutorial-details
+            [viewMode]="true"
+            [currentTutorial]="currentTutorial"
+          ></app-tutorial-details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
